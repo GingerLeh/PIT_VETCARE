@@ -1,0 +1,8 @@
+.mainCard{
+    padding: 64px;
+    background-color: var(--bgc-tertiary);
+    border-radius: 32px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 32px;
+}

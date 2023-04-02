@@ -1,0 +1,15 @@
+.every{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.main{
+    width: 100%;
+    padding-inline: 42px;
+    padding-block: 120px;
+    height: 100vh;
+    overflow-y: auto;
+}
