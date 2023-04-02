@@ -27,7 +27,7 @@ function FormCadastroPet() {
             <h1 style={{padding:32}}>{ id == undefined ? "Cadastro de pets" : "Alteração de pets"}</h1>
             <Form
                 labelCol={{
-                span: 4,
+                span: 6,
                 }}
                 wrapperCol={{
                 span: 14,
@@ -37,31 +37,22 @@ function FormCadastroPet() {
                 maxWidth: 600,
                 }}
             >
-                <Form.Item label="Nome">
-                    <Input  value={inputNome}/>
-                </Form.Item>
-                <Form.Item label="Email">
-                    <Input />
-                </Form.Item>
-                <Form.Item label="Senha">
-                    <Input />
-                </Form.Item>
-                <Form.Item label="Perfil">
-                    <Select defaultValue={"--Selecione--"}>
-                        <Select.Option value="-1">--Selecione--</Select.Option>
-                        <Select.Option value="1">Administrador</Select.Option>
-                        <Select.Option value="2">Funcionário</Select.Option>
-                    </Select>
-                </Form.Item>
-                <Form.Item label="Ativo" valuePropName="checked">
-                    <Switch />
-                </Form.Item>
-                <Form.Item>
-                    <Space wrap>
-                        <Button type="primary">Gravar</Button>
-                        <Button href="/pets">Voltar</Button>
-                    </Space>
-                </Form.Item>
+                <div style={{display:"grid"}}>
+                    <Form.Item label="Cliente Código">
+                        <Input  value={inputNome}/>
+                    </Form.Item>
+                    <Form.Item label="Nome">
+                        <Input />
+                    </Form.Item>
+                    <Form.Item label="Data de Nascimento">
+                        <Input />
+                    </Form.Item>
+                        <Space wrap>
+                            <Button type="primary">Gravar</Button>
+                            <Button href="/pets">Voltar</Button>
+                        </Space>
+                </div>
+                
             </Form>
         </div>
 
