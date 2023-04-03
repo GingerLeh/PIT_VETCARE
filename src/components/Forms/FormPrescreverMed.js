@@ -9,8 +9,9 @@ import {
     Switch,
   } from 'antd';
 import { useParams } from "react-router-dom";
+import InputTextBox from "../Utils/InputTextBox";
 
-function FormPrescreverMed() {
+function FormCadastroClientes() {
 
     let { id } = useParams();
 
@@ -24,48 +25,30 @@ function FormPrescreverMed() {
 
     return (
         <div>
-            <h1 style={{padding:32}}>{ id == undefined ? "Cadastro de serviços" : "Alteração de serviços"}</h1>
+            <h1 style={{padding:32}}>{ id == undefined ? "Prescrever Medicamentos" : "Alteração de Prescrição"}</h1>
             <Form
                 labelCol={{
-                span: 4,
+                span: 15,
                 }}
                 wrapperCol={{
-                span: 14,
+                span:80,
                 }}
                 layout="horizontal"
                 style={{
-                maxWidth: 600,
+                maxWidth: 1000,
                 }}
-            >
-                <Form.Item label="Nome">
-                    <Input  value={inputNome}/>
-                </Form.Item>
-                <Form.Item label="Email">
-                    <Input />
-                </Form.Item>
-                <Form.Item label="Senha">
-                    <Input />
-                </Form.Item>
-                <Form.Item label="Perfil">
-                    <Select defaultValue={"--Selecione--"}>
-                        <Select.Option value="-1">--Selecione--</Select.Option>
-                        <Select.Option value="1">Administrador</Select.Option>
-                        <Select.Option value="2">Funcionário</Select.Option>
-                    </Select>
-                </Form.Item>
-                <Form.Item label="Ativo" valuePropName="checked">
-                    <Switch />
-                </Form.Item>
-                <Form.Item>
-                    <Space wrap>
-                        <Button type="primary">Gravar</Button>
-                        <Button href="/prescrever">Voltar</Button>
-                    </Space>
-                </Form.Item>
+            >   <InputTextBox/>
+                        <Form.Item style={{marginLeft:95}}>
+                            <Space wrap>
+                                <Button type="primary">Gravar</Button>
+                                <Button href="/pets">Voltar</Button>
+                            </Space>
+                        </Form.Item>
+               
             </Form>
         </div>
 
     )
 }
 
-export default FormPrescreverMed;
+export default FormCadastroClientes;

@@ -24,45 +24,19 @@ function FormCadastroServicos() {
 
     return (
         <div>
-            <h1 style={{padding:32}}>{ id == undefined ? "Cadastro de serviços" : "Alteração de serviços"}</h1>
-            <Form
-                labelCol={{
-                span: 4,
-                }}
-                wrapperCol={{
-                span: 14,
-                }}
-                layout="horizontal"
-                style={{
-                maxWidth: 600,
-                }}
-            >
-                <Form.Item label="Nome">
-                    <Input  value={inputNome}/>
-                </Form.Item>
-                <Form.Item label="Email">
-                    <Input />
-                </Form.Item>
-                <Form.Item label="Senha">
-                    <Input />
-                </Form.Item>
-                <Form.Item label="Perfil">
-                    <Select defaultValue={"--Selecione--"}>
-                        <Select.Option value="-1">--Selecione--</Select.Option>
-                        <Select.Option value="1">Administrador</Select.Option>
-                        <Select.Option value="2">Funcionário</Select.Option>
-                    </Select>
-                </Form.Item>
-                <Form.Item label="Ativo" valuePropName="checked">
-                    <Switch />
-                </Form.Item>
-                <Form.Item>
-                    <Space wrap>
-                        <Button type="primary">Gravar</Button>
-                        <Button href="/produtos">Voltar</Button>
-                    </Space>
-                </Form.Item>
-            </Form>
+                     <Form.Item label="Descrição">
+                            <Input  value={inputNome}/>
+                        </Form.Item>
+                        <Form.Item label="Ativo" valuePropName="checked">
+                            <Switch />
+                        </Form.Item>
+                        <Form.Item style={{marginLeft:95}}>
+                            <Space wrap>
+                                <Button type="primary">Gravar</Button>
+                                <Button href="/pets">Voltar</Button>
+                            </Space>
+                        </Form.Item>
+      
         </div>
 
     )
